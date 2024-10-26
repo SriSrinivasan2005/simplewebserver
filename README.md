@@ -24,7 +24,7 @@ Testing the webserver.
 '''
 from http.server import HTTPServer,BaseHTTPRequestHandler
 
-content= '''
+content=
 <!doctype html>
 <html>
 <head>
@@ -60,7 +60,6 @@ content= '''
 </table>
 </body>
 </html>
-'''
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -74,8 +73,7 @@ print("This is my webserver")
 server_address =('',8000)
 httpd = HTTPServer(server_address,MyServer)
 httpd.serve_forever()
-'''
-
+"""
 ## OUTPUT:
 ![alt text](<image 1.png>)
 
